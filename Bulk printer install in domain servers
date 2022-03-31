@@ -1,0 +1,156 @@
+    ######### Canon LBP6310 ############
+    <#
+    $DriverName = "Canon LBP6310"
+    $DriverInf = "C:\Windows\System32\DriverStore\FileRepository\cnabgstd.inf_amd64_172fcdb75eb80b1b\cnabgstd.inf"
+    $PrinterComment = "Canon LBP6310"
+    $DriverPath = "\\<ip>\print$\x64\3"
+    #>
+    ######### CANON MF 226DN ISENSYS ############
+    <#
+    $DriverName = "Canon MF220 Series"
+    $DriverInf = "C:\Windows\System32\DriverStore\FileRepository\cnlb0ka64.inf_amd64_6594177424991968\cnlb0ka64.inf"
+    $PrinterComment = "CANON MF226DN ISENSYS"
+    $DriverPath = "\\<ip>\print$\x64\3"
+    #>
+    ######### Canon MF4570DN ############
+    <#
+    $DriverName = "Canon MF4500 Series UFRII LT"
+    $DriverInf = "C:\Windows\System32\DriverStore\FileRepository\cnlb0ka64.inf_amd64_ee519a18c4ff38aa\cnlb0ka64.inf"
+    $PrinterComment = "Canon MF4570DN"
+    $DriverPath = "\\<ip>\print$\x64\3"
+    #>
+    ######### Canon MF4870DN ############
+    <#
+    $DriverName = "Canon MF4800 Series UFRII LT"
+    $DriverInf = "C:\Windows\System32\DriverStore\FileRepository\cnlb0ka64.inf_amd64_8c92a30ae8b1a603\cnlb0ka64.inf"
+    $PrinterComment = "Canon MF4870DN"
+    $DriverPath = "\\<ip>\print$\x64\3"
+    #>
+    ######### HP 1606 ############
+    <#
+    $DriverName = "HP Universal Printing PCL 5 (v5.5.0)"
+    $DriverInf = "C:\Windows\System32\DriverStore\FileRepository\hpcu130t.inf_amd64_df89f38067b4bc9a\hpcu130t.inf"
+    $PrinterComment = "HP 1606DN"
+    $DriverPath = "\\<ip>\print$\x64\3"
+    #>
+    ######### HP LaserJet 1022 ############
+    <#
+    $DriverName = "HP Universal Printing PCL 5 (v5.5.0)"
+    $DriverInf = "C:\Windows\System32\DriverStore\FileRepository\hpcu130t.inf_amd64_df89f38067b4bc9a\hpcu130t.inf"
+    $PrinterComment = "HP 1022"
+    $DriverPath = "\\<ip>\print$\x64\3"
+    #>
+     ######### HP 1320 ############
+    <#
+    $DriverName = "HP Universal Printing PCL 5 (v5.5.0)"
+    $DriverInf = "C:\Windows\System32\DriverStore\FileRepository\hpcu130t.inf_amd64_df89f38067b4bc9a\hpcu130t.inf"
+    $PrinterComment = "HP 1320"
+    $DriverPath = "\\<ip>\print$\x64\3"
+    #>
+    ######### HP LaserJet 1606DN ############
+    <#
+    $DriverName = "HP Universal Printing PCL 5 (v5.5.0)"
+    #$DriverInf = "C:\Windows\System32\DriverStore\FileRepository\hpcu130t.inf_amd64_df89f38067b4bc9a\hpcu130t.inf"
+    $PrinterComment = "HP 1606DN"
+    #$DriverPath = "\\<ip>\print$\x64\3"
+    #>
+    ######### HP 2055 ############
+    <#
+    $DriverName = "HP Universal Printing PCL 5 (v5.5.0)"
+    $DriverInf = "C:\Windows\System32\DriverStore\FileRepository\hpcu130t.inf_amd64_df89f38067b4bc9a\hpcu130t.inf"
+    $PrinterComment = "HP 2055"
+    $DriverPath = "\\<ip>\print$\x64\3"
+    #>
+    ######### HP LASER JET PRO M404DN x64 ############
+    <#
+    $DriverName = "HP Universal Printing PCL 5"
+    $DriverInf = "C:\Windows\System32\DriverStore\FileRepository\hpcu094t.inf_amd64_1e1564788b595a3a\hpcu094t.inf"
+    $PrinterComment = "HP LASER JET PRO M404DN"
+    $DriverPath = "\\<ip>\print$\x64\3"
+    #>
+    ######### HP LaserJet P2035 ############
+    <#
+    $DriverName = "HP Universal Printing PCL 5 (v5.5.0)"
+    $DriverInf = "C:\Windows\System32\DriverStore\FileRepository\hpcu130t.inf_amd64_df89f38067b4bc9a\hpcu130t.inf"
+    $PrinterComment = "HP LaserJet P2035"
+    $DriverPath = "\\<ip>\print$\x64\3"
+    #>
+    ######### HP LaserJet PRO M426FDN ############
+    <#
+    $DriverName = "HP Universal Printing PCL 6"
+    $DriverInf = "C:\Windows\System32\DriverStore\FileRepository\hpcu118u.inf_amd64_6a620a6536f602cf\hpcu118u.inf"
+    $PrinterComment = "HP LaserJet PRO M426FDN"
+    $DriverPath = "\\<ip>\print$\x64\3"
+    #>
+    ######### HP LASERJET PRO MFP M428DW ############
+    <#
+    $DriverName = "HP Universal Printing PCL 6 (v6.8.0)"
+    $DriverInf = "C:\Windows\System32\DriverStore\FileRepository\hpcu230u.inf_amd64_b4ca9c64e272def6\hpcu230u.inf"
+    $PrinterComment = "HP LASERJET PRO MFP M428DW"
+    $DriverPath = "\\<ip>\print$\x64\3"
+    #>
+    ####################################################    
+    $PrinterIP = "<printer_ip>"
+    $PrinterPort = "9100"
+    $PrinterPortName = $PrinterIP
+    $PrinterCaption = "<prn_name>"
+    $PrinterLocation = "Planet Earth"
+    ####################################################
+    ###Single Servers###
+        #$ComputerList = @("single server_pc")
+
+    ###Servers List###
+        $ComputerList = @()
+        Import-Csv "path_to_csv_file" | `
+        % {$ComputerList += $_.Computer}
+    ####################################################
+    ######### DO NOT CHANGE THE LINES BELOW ############
+    ####################################################
+    Function CreatePrinterPort {
+        param ($PrinterIP, $PrinterPort, $PrinterPortName, $ComputerName)
+        $wmi = [wmiclass]"\\$ComputerName\root\cimv2:win32_tcpipPrinterPort"
+        $wmi.psbase.scope.options.enablePrivileges = $true
+        $Port = $wmi.createInstance()
+        $Port.name = $PrinterPortName
+        $Port.hostAddress = $PrinterIP
+        $Port.portNumber = $PrinterPort
+        $Port.SNMPEnabled = $false
+        $Port.Protocol = 1
+        $Port.put()
+    }
+    Function InstallPrinterDriver {
+        Param ($DriverName, $DriverPath, $DriverInf, $ComputerName)
+        $wmi = [wmiclass]"\\$ComputerName\Root\cimv2:Win32_PrinterDriver"
+        $wmi.psbase.scope.options.enablePrivileges = $true
+        $wmi.psbase.Scope.Options.Impersonation = `
+        [System.Management.ImpersonationLevel]::Impersonate
+        $Driver = $wmi.CreateInstance()
+        $Driver.Name = $DriverName
+        $Driver.DriverPath = $DriverPath
+        $Driver.InfName = $DriverInf
+        $wmi.AddPrinterDriver($Driver)
+        $wmi.Put()
+    }
+    Function CreatePrinter {
+        param ($PrinterCaption, $PrinterPortName, $DriverName, $ComputerName)
+        $wmi = ([WMIClass]"\\$ComputerName\Root\cimv2:Win32_Printer")
+        $Printer = $wmi.CreateInstance()
+        $Printer.Caption = $PrinterCaption
+        $Printer.DriverName = $DriverName
+        $Printer.PortName = $PrinterPortName
+        $Printer.DeviceID = $PrinterCaption
+        $printer.Location = $printerLocation
+        $printer.Comment = $printerComment
+        $Printer.Put()
+        
+    } 
+    foreach ($computer in $ComputerList) {
+        CreatePrinterPort -PrinterIP $PrinterIP -PrinterPort $PrinterPort `
+        -PrinterPortName $PrinterPortName -ComputerName $computer 
+        InstallPrinterDriver -DriverName $DriverName -DriverPath `
+        $DriverPath -DriverInf $DriverInf -ComputerName $computer
+        CreatePrinter -PrinterPortName $PrinterPortName -DriverName `
+        $DriverName -PrinterCaption $PrinterCaption -ComputerName $computer -Location $Printer.Location -Comment $Printer.Comment
+               
+    }
+
