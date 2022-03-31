@@ -1,0 +1,6 @@
+$computers = Get-Content 'path_to_csv_file'
+foreach ($computer in $computers)
+{
+ Invoke-Command –ComputerName $computers -Authentication NegotiateWithImplicitCredential -ScriptBlock {Set-PrintConfiguration -PrinterName "<prn_name>" -PaperSize "A4"}
+ Invoke-Command –ComputerName $computers -Authentication NegotiateWithImplicitCredential -ScriptBlock {SetACL.exe -on <prn_name> -ot prn -actn ace -ace "n:<user/group_name>;p:print,man_docs" -actn trustee -trst "n1:Everyone;ta:remtrst;w:dacl,sacl" -rec cont_obj -ignoreerr}
+}
