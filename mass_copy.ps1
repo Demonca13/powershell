@@ -7,6 +7,8 @@ $outputPath = "path_for_log"
 
 $source1 = "<path_to_source_file>"
 $copyTo1 = "<path_to_dest_dir>"
+#$source2 = "<path_to_source_file>"
+#$copyTo2 = "<path_to_dest_dir>"
 
 echo "Log" > $outputPath
 echo "Date Ran: $currentRDate" >> $outputPath
